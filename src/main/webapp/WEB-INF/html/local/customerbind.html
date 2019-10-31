@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet"
+          href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet"
+          href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../resources/css/common/panel.css">
+</head>
+<body>
+<header class="bar bar-nav">
+    <h1 class="title">绑定微信</h1>
+</header>
+<div class="content">
+    <p style="text-align: right; font-size: 20px">
+        <a href="#" class="alert-text" style="margin-right: 10px" id="help">帮助</a>
+    </p>
+    <div class="list-block">
+        <ul>
+            <li>
+                <div class="item-content">
+                    <div class="item-media">
+                        <i class="icon icon-form-name"></i>
+                    </div>
+                    <div class="item-inner">
+                        <label for="username" class="item-title label">用户名</label>
+                        <div class="item-input">
+                            <input type="text" id="username" placeholder="用户名">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item-content">
+                    <div class="item-media">
+                        <i class="icon icon-form-email"></i>
+                    </div>
+                    <div class="item-inner">
+                        <label for="psw" class="item-title label">密码</label>
+                        <div class="item-input">
+                            <input type="password" id="psw" placeholder="密码">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="verifyPart">
+                <div class="item-content">
+                    <div class="item-media">
+                        <i class="icon icon-form-email"></i>
+                    </div>
+                    <div class="item-inner">
+                        <label for="j_captcha" class="item-title label">验证码</label>
+                        <input id="j_captcha" name="j_captcha" type="text" class="form-control in" placeholder="验证码"/>
+                        <div class="item-input">
+                            <img id="captcha_img" alt="点击更换" title="点击更换"
+                                 onclick="changeVerifyCode(this)" src="../Kaptcha"/>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content-block">
+        <div class="row">
+            <div class="col-50">
+                <a href="#" onclick="javascript :history.back(-1);"
+                   class="button button-big button-fill button-danger">返回</a>
+            </div>
+            <div class="col-50">
+                <a href="#" class="button button-big button-fill" id="submit">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-cover theme-dark" id="panel">
+    <div class="content-block">
+        <p>
+            <a href="#" class="close-panel">
+                账号绑定:
+            </a>
+        </p>
+        <p style="color: #007aff">
+            此页面是用于使用微信账号登陆平台，但是没有在平台上注册账号的用户，绑定账号使用。<br/>绑定成功后，本平台既可以使用微信登陆，也可以使用此账号登陆
+        </p>
+        <p style="color: #1f7199">
+            友情提示：<br/>已经绑定过账号的用户请勿重复绑定哦(o_oz!!)
+        </p>
+    </div>
+</div>
+<script type='text/javascript'
+        src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript'
+        src='../resources/js/local/customerbind.js' charset='utf-8'></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+</body>
+</html>
